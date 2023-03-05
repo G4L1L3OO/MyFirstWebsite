@@ -1,0 +1,180 @@
+<!-- Make it easy on the robots, browsers; boilerplate metadata -->
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Start the head -->
+
+<head>
+    <title>My frist Website</title>
+    <!-- More boilerplate metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Use Bootstrap V5 styling   -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      table, th, td {
+        border: 1px solid black;
+      }
+      #map{
+        height: 500px;
+        width: 100%;
+      }
+    </style>
+</head>
+<body>
+        <!-- Header 1   -->
+        <h1>This is my first test in HTML (1st Header)</h1>
+        <!-- Header 2   -->
+        <h2>An HTML Payground (2nd Header)</h2>
+        <!-- Header 3   -->
+        <h3>(3rd Header)</h3>
+        <!-- Header 4   -->
+        <h4>(4th Header)</h4>
+        <!-- Header 5   -->
+        <h5>(5th Header)</h5>
+        <!-- Header 6 : This is the last Header possible to add in HTML5 -->
+        <h6><b>Last</b> Header (6th Header)</h6>
+        <!-- The tag <p> marks a new paragraph and <b> bolds the text   -->
+        <p><b>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</b> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <!-- <i> tag marks text as italics   -->
+        <p><i>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</i><br> 
+          <!-- <u> tag underlines the text   -->
+          <u>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</u><br><br><br><br>
+          <!-- <em> tag emphasises the text, which just puts in in italics   -->
+          <em>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</em><br>
+          <!-- <strong> tag emphasises the text, which just puts in in bold   -->
+          <strong>Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</strong></p>
+          <hr> <!-- <hr> tag draws a line in the text   -->
+        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+       <!-- <a> tag ankers a text, usually used for links. It makes the text within the tad a link, but an attribute needs to be added using the href which stands for HyperText reference   -->
+        <!-- URL stands for Universal resource locator   -->
+        <!-- the below example will forward you to the google.com website as the <a> tag will load the website on the same tab by default  -->
+        <a href="http://www.google.com">GOOGLE</a><br>
+        <!-- the target attribute will allow you to open the page in a new website  -->
+        <a href="http://www.yahoo.com" target="_blank">YAHOO</a><br>
+        
+        <!-- <img> tag will allow you to load images. Similar to the <a> tag, the <img> tag needs a URL which needs to be added via the attribute src that stands for Source   -->
+        <img src="https://placebeard.it/640x360"><br>
+        <!-- Below example has a border added   -->
+        <img src="https://placebear.com/640/360" border="10"><br>
+
+        <!-- Unordered Lists will create bullet points   -->
+        <ul>
+          <li>Apples</li>
+          <!-- putting and HTML tag within another one is refered to as "nesting"   -->
+          <ul>
+              <li>Green</li>
+              <li>Red</li>
+              <li>Rotten</li>
+          </ul>
+          <li>Bananas</li>
+          <li>Oranges</li>
+          <li>Dragonfruit</li>
+        </ul>
+        <!-- Ordered Lists will create numbered list   -->
+        <ol>
+          <li>BMW</li>
+          <li>Audi</li>
+          <li>Mercedes</li>
+          <li>Jeep</li>
+        </ol>
+        <!-- Tables with a border  -->
+        <table style="width:100%" border="1" cellpading="100" cellspacing="100">
+          <!-- First row   -->
+          <tr>
+            <!-- Table Headers   -->
+            <th>Month</th>
+            <th>Rent</th>
+            <th colspan="2">Utilities</th>
+            <th>Groceries</th>
+          </tr>
+          <tr>
+            <!-- Table Data  -->
+            <td>March</td>
+            <td>1000</td>
+            <td>400</td>
+            <td>200</td>
+            <td>100</td>
+          </tr>
+        </table>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p><strong>VIDEO</strong></p><br>
+  <iframe width="420" height="315"
+    src="https://www.youtube.com/embed/tgbNymZ7vqY">
+  </iframe>
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+  
+    <p><u>HOVER-OVER BUTTONS</u></p><br>
+  <button class="btn btn-primary" onmouseover="getLocation()">Get Geolocation</button>
+	<button class="btn btn-primary" onmouseover="document.getElementById('demo').innerHTML = Date()">
+  Click me to display Date and Time.</button><br><br><br>
+
+
+
+  <div class="container mt-3">
+    <p id="demo"></p>
+  </div>
+  <script>
+    const myElement = document.getElementById("demo");
+
+    function getLocation() {
+      if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showPosition);
+      } 
+      else {
+      myElement.innerHTML = "Geolocation is not supported by this browser.";
+      }
+  }
+
+  function showPosition(position) {
+  myElement.innerHTML = "Latitude: " + position.coords.latitude +
+  "<br>Longitude: " + position.coords.longitude;
+  }
+ </script>
+
+<div id="map"></div>
+<script>
+  function initMap() {
+    var location = {lat: 49.578169, lng: 6.136938};
+    var map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 10,
+      center: location
+    });
+    var marker = new google.maps.Marker({
+      position: location,
+      map: map
+    })
+  }
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgl17pRUm-16V2bpaUPI-_up2HvqPU2HI&callback=initMap"></script>
+
+
+<p id="demo"></p>
+</div>
+
+
+<script>
+  function myFunction() {
+    const inpObj = document.getElementById("id1");
+    if (!inpObj.checkValidity()) {
+      document.getElementById("demo").innerHTML = inpObj.validationMessage;
+    }
+  }
+</script>
+</body>
+</html>
